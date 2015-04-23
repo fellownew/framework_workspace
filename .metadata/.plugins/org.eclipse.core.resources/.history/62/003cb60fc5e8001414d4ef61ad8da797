@@ -1,0 +1,8 @@
+package mybatis.hr.vo;
+
+public class Department {
+	private int departmentId;
+	private String departmentName;
+	private String location;
+	
+}

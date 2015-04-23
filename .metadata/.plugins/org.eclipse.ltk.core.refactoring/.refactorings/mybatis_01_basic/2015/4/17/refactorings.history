@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;mybatis.hr.dao.DepaertmentDAO.java&apos; to &apos;DepartmentDAO.java&apos;&#x0D;&#x0A;- Original project: &apos;mybatis_01_basic&apos;&#x0D;&#x0A;- Original element: &apos;mybatis.hr.dao.DepaertmentDAO.java&apos;&#x0D;&#x0A;- Renamed element: &apos;mybatis.hr.dao.DepartmentDAO.java&apos;" description="Rename compilation unit &apos;DepaertmentDAO.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;mybatis.hr.dao{DepaertmentDAO.java" name="DepartmentDAO.java" references="false" stamp="1429752009365" version="1.0"/>
+</session>

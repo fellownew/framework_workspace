@@ -1,0 +1,7 @@
+package mybatis.hr.dao;
+
+public class DepaertmentDAO {
+	private static DepartmentDAO inst = new DepartmentDAO();
+	
+
+}

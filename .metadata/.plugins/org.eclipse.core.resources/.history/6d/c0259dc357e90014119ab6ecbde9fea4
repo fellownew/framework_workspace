@@ -1,0 +1,26 @@
+package mybatis.hr.dao;
+
+import java.io.InputStream;
+
+import mybatis.hr.vo.Department;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSessionFactory;
+
+public class DepartmentDAO {
+	private static DepartmentDAO inst = new DepartmentDAO();
+	private SqlSessionFactory sessionFactory;
+	
+	private DepartmentDAO(){
+		InputStream is = null;
+		is = Resources.getResourceAsStream("mybatis-config.xml")
+	}
+	public static DepartmentDAO getInstance(){
+		return inst;
+	}
+	
+	public int insertDepartment(Department department){
+		
+		return 0;
+	}
+}

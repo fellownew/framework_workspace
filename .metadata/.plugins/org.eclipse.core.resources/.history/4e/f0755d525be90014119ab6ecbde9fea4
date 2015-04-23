@@ -1,0 +1,8 @@
+package mybatis.hr.test;
+
+public class TestDepartment {
+	public static void main(String[] args) {
+		Department dept = new Department(634,"634특별부서","서울");
+	}
+	
+}

@@ -1,0 +1,17 @@
+package mybatis.hr.test;
+
+import mybatis.hr.dao.DepartmentDAO;
+import mybatis.hr.vo.Department;
+
+public class TestDepartment {
+	public static void main(String[] args) {
+		DepartmentDAO dao = DepartmentDAO.getInstance();
+		Department dept = new Department(634,"634부서","서울");
+		int cnt = dao.insertDepartment(dept);
+		System.out.println("insert 확인 : "+cnt);
+		System.out.println("- 부서 ID로 부서 조회 - ");
+		Map map = dao.selectDepartmentByIdMap(28);
+		System.out.println(map);
+	}
+	
+}

@@ -1,0 +1,17 @@
+package mybatis.hr.dao;
+
+import mybatis.hr.vo.Department;
+
+public class DepartmentDAO {
+	private static DepartmentDAO inst = new DepartmentDAO();
+	private sqlSessionFactory sessionFactory;
+	private DepartmentDAO(){}
+	public static DepartmentDAO getInstance(){
+		return inst;
+	}
+	
+	public int insertDepartment(Department department){
+		
+		return 0;
+	}
+}

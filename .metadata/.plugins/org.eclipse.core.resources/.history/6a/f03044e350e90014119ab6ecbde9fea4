@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- sql문과 관련된 설정하는 설정파일 
+	* SQL+파라미터의 타입.(?에 들어갈 값) + 어떤 값을 어떤 ?에 넣을지.
+
+-->
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper>
+</mapper>
