@@ -2,6 +2,16 @@
 <!-- mybatis 전역 설정 파일 -->
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd" >
 <configuration>
+	<!-- parameterType, resultType에 지정할 클래스 이름(패키지명까지 포함하는...)의 별칭을 지정 -->
+	
+	<typeAliases>
+	
+		<!-- typeAlias type="mybatis.hr.vo.Department" alias="department"/ -->
+		<!-- package 단위로 thpe별칭을 설정.
+			name 속성에 지정한 패키지 내의 모든 클래스들에 자동으로 별칭을 설정. - 별칭을 설정. - 별칭 : Class이름(첫글자는 소문자) -->
+		<package name="mybatis.hr.vo"/>
+		
+	</typeAliases>
 	<environments default="development">
 		<environment id="development">
 			<transactionManager type="JDBC"/>

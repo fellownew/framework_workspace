@@ -106,4 +106,31 @@ public class DepartmentDAO {
 		}
 	}
 	
+	public List selectRandom(String tableName){
+		SqlSession session = sessionFactory.openSession();
+		try{
+			return session.selectList("mybatis.hr.dao.department.selectRandom",tableName);
+		}finally{
+			session.close();
+		}
+	}
+	
+	public List<Department> selectDepartmentByName(String name){
+		SqlSession session = sessionFactory.openSession();
+		try{
+			return session.selectList("mybatis.hr.dao.department.selectDepartmentByName",name);
+		}finally{
+			session.close();
+		}
+	}
+	
+	public List<Department> selectDepartmentByLocation(String location){
+		SqlSession session = sessionFactory.openSession();
+		try{
+			return session.selectList("mybatis.hr.dao.department.selectDepartmentByLocation",location);
+		}finally{
+			session.close();
+		}
+	}
+	
 }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- mybatis 전역 설정 파일 -->
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd" >
+<configuration>
+	<!--  -->
+	<typeAliases>
+		<typeAlias type=""/>
+	</typeAliases>
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC"/>
+			<dataSource type="POOLED">
+				<!-- 연결할 DataBase 정보 -->
+				<property name="driver" value="oracle.jdbc.driver.OracleDriver"/>
+				<property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:XE"/>
+				<property name="username" value="scott"/>
+				<property name="password" value="tiger"/>
+				<!-- Connection Pool -->
+				<property name="poolMaximumActiveConnections" value="50"/>
+				<property name="poolMaximumIdleConnections" value="30"/>
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="mybatis/hr/dao/config/departmentMapper.xml"/>
+	</mappers>
+</configuration>

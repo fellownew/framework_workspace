@@ -1,7 +1,0 @@
-package mybatis.hr.test;
-
-public class TestDepartment {
-	private TestDepartment inst = new TestDepartment();
-	private TestDepartment(){}
-	
-}

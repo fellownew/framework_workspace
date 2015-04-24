@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mybatis.hr.dao.consumer">
+
+	<sql id="consumer-select">
+		select id,password,name,email,phone_number,mileage from consumer
+	</sql>
+
+	<!-- 
+		insertCustomer()
+		updateCustomer()
+		deleteCustomerById() - 고객 ID로 고객 삭제
+		selectCustomerById() - 고객 ID로 고객조회
+		selectCustomerByName() - 고객이름으로 고객조회
+		selectCustomerByEmail() - 이메일로 고객조회
+		selectCustomerByMileageRange() - 마일리지의 범위로 고객조회
+		TestCustomer-main() -> CustomerDAO 
+	-->
+	
+	<insert id="insertConsumer" parameterType="consumer">
+		insert into consumer(id,password,name,email,phone_number,mileage) values(#{ID},#{password},#{name},#{email},#{phoneNumber},#{mileage})
+	</insert>
+	
+	<update id="updateConsumer" parameterType="consumer">
+		update consumer set password=#{password},name=#{name},email=#{email},phone_number=#{phoneNumber},mileage=#{mileage} where id=#{ID}
+	</update>
+	
+	<delete id="deleteConsumerById" parameterType="int" >
+		delete from consumer where id=#{value}
+	</delete>
+	
+	<resultMap type="consumer" id="consumer-resultmap">
+		<!-- column : 조회컬럼-resultset기준, property : 조회값을 넣을 setter -->
+		<id column="id" property="ID"/><!-- pk 조회값 설정 -->
+		<result column="password" property="password"/>
+		<result column="name" property="name"/>
+		<result column="email" property="email"/>
+		<result column="phone_number" property="phoneNumber"/>
+		<result column="mileage" property="mileage"/>
+	</resultMap>
+
+	<!-- 조회 결과를 넣을 객체의 생성자를 통해 넣는 외부매핑 설정 -->
+	<resultMap type="consumer" id="consumer-constructor-resultmap">
+		<constructor>
+			<idArg column="id" javaType="string"/>
+			<arg column="password" javaType="string"/>
+			<arg column="name" javaType="string"/>
+			<arg column="email" javaType="string"/>
+			<arg column="phone_number" javaType="string"/>
+			<arg column="mileage" javaType="_int"/>
+		</constructor>
+	</resultMap>
+	
+	
+	<select id="selectConsumerById" parameterType="string" resultMap="consumer-resultmap">
+		<include refid="consumer-select"/>
+		where id=#{value}
+	</select>
+	
+	<select id="selectConsumerByName" parameterType="string" resultMap="consumer-resultmap">
+		<include refid="consumer-select"/>
+		where name=#{value}
+	</select>
+	
+		<select id="selectConsumerByEmail" parameterType="string" resultMap="consumer-resultmap">
+		<include refid="consumer-select"/>
+		where email=#{value}
+	</select>
+	
+	<select id="selectConsumerByMileageRange" parameterType="mybatis.hr.vo.mileage" resultMap="consumer-constructor-resultmap">
+		<include refid="consumer-select"/>
+		where mileage #{vo.minMile} between #{vo.maxMile}
+	</select>
+	
+
+
+
+</mapper>

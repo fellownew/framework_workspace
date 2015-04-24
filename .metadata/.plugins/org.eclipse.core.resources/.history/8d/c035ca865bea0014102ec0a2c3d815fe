@@ -1,0 +1,6 @@
+package mybatis.hr.vo;
+
+public class Mileage {
+	private int minMile;
+	private int maxMile;
+}

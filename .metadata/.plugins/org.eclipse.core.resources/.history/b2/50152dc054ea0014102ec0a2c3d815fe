@@ -1,0 +1,10 @@
+package mybatis.hr.vo;
+
+public class Customers {
+	private String ID;
+	private String password;
+	private String name;
+	private String email;
+	private String phoneNumber;
+	private int mileage;
+}
