@@ -67,4 +67,37 @@
 		where location like '%'||#{value}||'%'
 	</select>
 	
+	<resultMap type="department" id="department-employee-resultmap">
+		<id column="department_id" property="departmentId"/><!-- pk 조회값 설정 -->
+		<result column="department_name" property="departmentName"/>
+		<result column="location" property="location"/>
+		<collection property="employees" ofType="employee">
+			<id column="employee_id" property="employeeId"/>
+			<result column="employee_name" property="employeeName"/>
+			<result column="email" property="email"/>
+			<result column="job_position" property="jobPosition"/>
+			<result column="salaly" property="salaly"/>
+			<result column="hire_date" property="hireDate"/>
+		</collection>
+	</resultMap>
+	
+	<select id="selectDepartmentById_JoinEmployee" resultMap="department-employee-resultmap2">
+  	select emp.employee_id,emp.employee_name,emp.email,emp.job_position,emp.salary,emp.hire_date,emp.department_id,dept.department_name,dept.location
+	from employee emp, department dept
+	where dept.department_id = 100 and emp.department_id = dept.department_id
+	</select>
+	
+		<resultMap type="department" id="department-employee-resultmap2" extends="department-resultmap">
+		<collection property="employees" ofType="employee" resultMap="mybatis.hr.dao.employee.employee-resultmap">
+		</collection>
+	</resultMap>
+	
+	<insert id="insertDepartmentSequence" parameterType="department">
+		<selectKey keyProperty="departmentId" resultType="_int" order="BEFORE">
+			select dept_id_seq.nextval from dual
+		</selectKey>
+		insert into department(department_id,department_name,location) values(#{departmentId},#{departmentName},#{location})		
+	
+	</insert>
+	
 </mapper>

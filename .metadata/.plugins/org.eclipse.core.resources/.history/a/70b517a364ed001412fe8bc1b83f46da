@@ -1,0 +1,40 @@
+package publisher.dao;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+
+import publisher.common.DatabaseManager;
+import publisher.vo.Publisher;
+
+public class PublisherDAO {
+	private static PublisherDAO inst = new PublisherDAO();
+	private SqlSessionFactory sessionFactory;
+	private String ns = "mybatis.dao.publisher.";
+	
+	private PublisherDAO(){
+		sessionFactory = DatabaseManager.getInstance().getSqlSessionFactory();
+	}
+	public static PublisherDAO getInstance(){
+		return inst;
+	}
+	
+	public int insertPublisher(Publisher publisher){
+		SqlSession session = sessionFactory.openSession();
+		try{
+			int cnt = session.insert(ns+"insertPublisher");
+			return cnt;
+		}finally{
+			session.close();
+		}
+	}
+		
+	public int deletePublisherByNo(Publisher publisher){
+		SqlSession session = sessionFactory.openSession();
+		try{
+			int cnt = session.insert(ns+"deletePublisherByNo");
+			return cnt;
+		}finally{
+			session.close();
+		}
+	}
+}

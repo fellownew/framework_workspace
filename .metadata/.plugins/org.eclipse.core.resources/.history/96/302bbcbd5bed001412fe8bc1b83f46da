@@ -1,0 +1,16 @@
+package publisher.vo;
+
+import java.util.Date;
+
+public class Book {
+	private String ISBN;
+	private String title;
+	private String author;
+	private int page;
+	private int price;
+	private Date publish_date;
+	private int publisher_no;
+	
+	public Book(){}
+	
+}

@@ -1,0 +1,27 @@
+create table publisher(
+publisher_no number,
+publisher_name varchar2(50) not null,
+publisher_address varchar2(100) not null,
+publisher_tel varchar2(20) not null,
+constraint pk_pub_no primary key(publisher_no)
+);
+
+create table book(
+isbn varchar2(13) primary key,
+title varchar2(50) not null,
+author varchar(50) not null,
+page number(4) not null,
+price number not null,
+publish_date sysdate not null,
+publisher_no number,
+foreign key(publisher_no) references publisher(publisher_no)
+)
+
+
+
+select *from book
+select *from publisher
+select ISBN,title,author,page,price,publish_date,publisher_no from book
+
+create sequence pub_No_seq;
+select pub_No_seq.nextval from dual

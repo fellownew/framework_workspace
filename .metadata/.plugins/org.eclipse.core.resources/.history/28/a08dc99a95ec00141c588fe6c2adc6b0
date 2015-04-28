@@ -1,0 +1,7 @@
+package mybatis.hr.dao;
+
+public class EmployeeDAO {
+	private static EmployeeDAO inst = new EmployeeDAO();
+	private EmployeeDAO(){}
+	public 
+}

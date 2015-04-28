@@ -1,0 +1,13 @@
+package common.vo;
+
+import java.util.Date;
+
+public class Member {
+	private String memberId;
+	private String memberPassword;
+	private String memberName;
+	private String memberEmail;
+	private Date memberDate;
+	
+	
+}

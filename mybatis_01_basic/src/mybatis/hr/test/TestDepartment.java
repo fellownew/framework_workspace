@@ -6,6 +6,7 @@ import java.util.Set;
 
 import mybatis.hr.dao.DepartmentDAO;
 import mybatis.hr.vo.Department;
+import mybatis.hr.vo.Employee;
 
 public class TestDepartment {
 	public static void main(String[] args) {
@@ -55,5 +56,19 @@ public class TestDepartment {
 		for(Object o:rList){
 			System.out.println(o);
 		}
+		
+		System.out.println("- 조인 - ");
+		Department dept1 = dao.selectDepartmentById_JoinEmployee(100);
+		System.out.println("부서ID : "+dept1.getDepartmentId()+"\n 부서명 : "+dept1.getDepartmentName()+"\n 위치 : "+dept1.getLocation());
+		for(Employee e : dept1.getEmployees()){
+			System.out.println(e);
+		}
+		
+		System.out.println("sequence insert");
+		dept = new Department(0,"시퀀스부서","서울");
+		cnt = dao.insertDepartmentSequence(dept);
+		System.out.println(dept);
+		
+		
 	}
 }

@@ -1,0 +1,18 @@
+package publisher.dao;
+
+import mybatis.hr.common.DatabaseManager;
+
+import org.apache.ibatis.session.SqlSessionFactory;
+
+public class PublisherDAO {
+	private static PublisherDAO inst = new PublisherDAO();
+	private SqlSessionFactory sessionFactory;
+	
+	private PublisherDAO(){
+		sessionFactory = DatabaseManager.getInstance().getSqlSessionFactory();
+	}
+	public static PublisherDAO getInstance(){
+		return inst;
+	}
+	
+}

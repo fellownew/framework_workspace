@@ -1,0 +1,20 @@
+package pub.test;
+
+import pub.dao.PublisherDAO;
+import pub.vo.Publisher;
+
+public class TestPublisher {
+	public static void main(String[] args) {
+		System.out.println("1");
+		PublisherDAO dao = PublisherDAO.getInstance();
+		System.out.println("2");
+		int cnt = 0;
+		
+		System.out.println("insert Publisher");
+		Publisher ps = new Publisher(0,"대림출판사","서울","02-1234-1234");
+		cnt = dao.insertPublisher(ps);
+		System.out.println("insert 결과 : "+cnt);
+		
+		
+	}
+}

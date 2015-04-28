@@ -1,0 +1,5 @@
+package mybatis.hr.vo;
+
+public class Employee {
+
+}

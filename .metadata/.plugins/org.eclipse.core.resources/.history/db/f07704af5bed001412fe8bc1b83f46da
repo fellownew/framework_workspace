@@ -1,0 +1,5 @@
+package publisher.vo;
+
+public class Book {
+	
+}

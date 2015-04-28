@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mybatis.dao.publisher">
+	<sql id="publisher-select">
+		select publisher_no,publisher_name,publisher_address,publisher_tel from publisher
+	</sql>
+
+	<resultMap type="publisher" id="publisher-resultmap">
+		<id column="publisher_no" property="publisherNo"/>
+		<result column="publisher_name" property="publisherName"/>
+		<result column="publisher_address" property="publisherAddress"/>
+		<result column="publisher_tel" property="publisherTel"/>
+	</resultMap>
+	
+	<insert id="insertPublisher" parameterType="publisher">
+		insert into publisher(publisher_no,publisher_name,publisher_address,publisher_tel) values (#{publisherNo},#{publisherName},#{publisherAddress},#{publisherTel})
+	</insert>
+	
+	<delete id="deletePublisherByNo" parameterType="int">
+		delete from publisher where publisher_no=#{no}
+	</delete>
+	
+	<update id="updatePublisher" parameterType="publisher">
+		update publisher set publisher_name=#{publisherName},publisher_address=#{publisherAddress},publisher_tel=#{publisherTel} where publisher_no=#{publisherNo}
+	</update>
+	
+	
+	
+</mapper>

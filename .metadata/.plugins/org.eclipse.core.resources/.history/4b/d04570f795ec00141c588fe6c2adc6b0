@@ -1,0 +1,13 @@
+package mybatis.hr.dao;
+
+public class EmployeeDAO {
+	private static EmployeeDAO inst = new EmployeeDAO();
+	private EmployeeDAO(){
+		InputStream is = null;
+		
+		
+	}
+	public static EmployeeDAO getInstance(){
+		return inst;
+	}
+}

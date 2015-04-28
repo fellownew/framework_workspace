@@ -1,31 +1,20 @@
 package mybatis.hr.dao;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 import java.util.Map;
 
+import mybatis.hr.common.DatabaseManager;
 import mybatis.hr.vo.Department;
 
-import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 public class DepartmentDAO {
 	private static DepartmentDAO inst = new DepartmentDAO();
 	private SqlSessionFactory sessionFactory;
 	
 	private DepartmentDAO(){
-		InputStream is = null;
-		try {
-			is = Resources.getResourceAsStream("mybatis-config.xml");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
-		sessionFactory = builder.build(is);
+		sessionFactory = DatabaseManager.getInstance().getSqlSessionFactory();
 	}
 	public static DepartmentDAO getInstance(){
 		return inst;
@@ -128,6 +117,25 @@ public class DepartmentDAO {
 		SqlSession session = sessionFactory.openSession();
 		try{
 			return session.selectList("mybatis.hr.dao.department.selectDepartmentByLocation",location);
+		}finally{
+			session.close();
+		}
+	}
+	
+	public Department selectDepartmentById_JoinEmployee(int departmentId){
+		SqlSession session = sessionFactory.openSession();
+		try{
+		return session.selectOne("mybatis.hr.dao.department.selectDepartmentById_JoinEmployee",departmentId);
+		}finally{
+			session.close();
+		}
+	}
+	
+	public int insertDepartmentSequence(Department department){
+		SqlSession session = sessionFactory.openSession();
+		try{
+			int cnt = session.insert("mybatis.hr.dao.department.insertDepartmentSequence",department);
+			return cnt;
 		}finally{
 			session.close();
 		}

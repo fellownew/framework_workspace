@@ -1,15 +1,31 @@
 package mybatis.hr.vo;
 
+import java.util.List;
+
 public class Department {
 	private int departmentId;
 	private String departmentName;
 	private String location;
+	private List<Employee> employees;
 	public Department(){}
 	public Department(int departmentId, String departmentName, String location) {
 		super();
 		this.departmentId = departmentId;
 		this.departmentName = departmentName;
 		this.location = location;
+	}
+	
+	
+	public Department(int departmentId, String departmentName) {
+		super();
+		this.departmentId = departmentId;
+		this.departmentName = departmentName;
+	}
+	public List<Employee> getEmployees() {
+		return employees;
+	}
+	public void setEmployees(List<Employee> employees) {
+		this.employees = employees;
 	}
 	public int getDepartmentId() {
 		return departmentId;

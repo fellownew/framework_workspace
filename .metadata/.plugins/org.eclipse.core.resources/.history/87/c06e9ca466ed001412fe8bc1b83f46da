@@ -1,0 +1,7 @@
+package publisher.test;
+
+public class TestPublisher {
+public static void main(String[] args) {
+	
+}
+}

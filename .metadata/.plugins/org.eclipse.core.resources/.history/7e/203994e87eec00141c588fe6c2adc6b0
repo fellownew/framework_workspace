@@ -1,0 +1,16 @@
+package mybatis.hr.vo;
+
+import java.util.Date;
+
+public class Employee {
+	private int employeeId;
+	private String employeeName;
+	private String email;
+	private String jobPostion;
+	private long salary;
+	private Date hireDate;
+	private int departmentId;//부모테이블(Department)의PK -> d_id, d_name,loc
+	private Department department;//직원이 다니는 부서의 데이터를 넣을 VO
+	public Employee(){}
+
+}

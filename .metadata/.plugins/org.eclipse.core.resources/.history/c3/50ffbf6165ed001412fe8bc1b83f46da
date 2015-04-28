@@ -1,0 +1,30 @@
+package publisher.dao;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+
+import publisher.common.DatabaseManager;
+import publisher.vo.Book;
+
+public class BookDAO {
+	private static BookDAO inst = new BookDAO();
+	private SqlSessionFactory sessionFactory;
+	private String ns = "mybatis.dao.book.";
+	
+	private BookDAO(){
+		sessionFactory = DatabaseManager.getInstance().getSqlSessionFactory();
+	}
+	public static BookDAO getInstance(){
+		return inst;
+	}
+	
+	public int insertBook(Book book){
+		SqlSession session = sessionFactory.openSession();
+		try{
+			int cnt = session.insert(ns+"insertBook",book);
+			return cnt;
+		}finally{
+			session.close();
+		}
+	}
+}

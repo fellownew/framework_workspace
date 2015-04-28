@@ -1,0 +1,162 @@
+package publisher.vo;
+
+import java.util.Date;
+
+public class Book {
+	private String ISBN;
+	private String title;
+	private String author;
+	private int page;
+	private int price;
+	private Date publish_date;
+	private int publisher_no;
+	private Publisher publisher;
+	
+	public Book(){}
+
+
+
+	public Book(String iSBN, String title, String author, int page, int price,
+			Date publish_date, int publisher_no, Publisher publisher) {
+		super();
+		ISBN = iSBN;
+		this.title = title;
+		this.author = author;
+		this.page = page;
+		this.price = price;
+		this.publish_date = publish_date;
+		this.publisher_no = publisher_no;
+		this.publisher = publisher;
+	}
+
+
+
+	public Publisher getPublisher() {
+		return publisher;
+	}
+
+
+
+	public void setPublisher(Publisher publisher) {
+		this.publisher = publisher;
+	}
+
+
+
+	public String getISBN() {
+		return ISBN;
+	}
+
+	public void setISBN(String iSBN) {
+		ISBN = iSBN;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	public int getPage() {
+		return page;
+	}
+
+	public void setPage(int page) {
+		this.page = page;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
+	public Date getPublish_date() {
+		return publish_date;
+	}
+
+	public void setPublish_date(Date publish_date) {
+		this.publish_date = publish_date;
+	}
+
+	public int getPublisher_no() {
+		return publisher_no;
+	}
+
+	public void setPublisher_no(int publisher_no) {
+		this.publisher_no = publisher_no;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((ISBN == null) ? 0 : ISBN.hashCode());
+		result = prime * result + ((author == null) ? 0 : author.hashCode());
+		result = prime * result + page;
+		result = prime * result + price;
+		result = prime * result
+				+ ((publish_date == null) ? 0 : publish_date.hashCode());
+		result = prime * result + publisher_no;
+		result = prime * result + ((title == null) ? 0 : title.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Book other = (Book) obj;
+		if (ISBN == null) {
+			if (other.ISBN != null)
+				return false;
+		} else if (!ISBN.equals(other.ISBN))
+			return false;
+		if (author == null) {
+			if (other.author != null)
+				return false;
+		} else if (!author.equals(other.author))
+			return false;
+		if (page != other.page)
+			return false;
+		if (price != other.price)
+			return false;
+		if (publish_date == null) {
+			if (other.publish_date != null)
+				return false;
+		} else if (!publish_date.equals(other.publish_date))
+			return false;
+		if (publisher_no != other.publisher_no)
+			return false;
+		if (title == null) {
+			if (other.title != null)
+				return false;
+		} else if (!title.equals(other.title))
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Book [ISBN=" + ISBN + ", title=" + title + ", author=" + author
+				+ ", page=" + page + ", price=" + price + ", publish_date="
+				+ publish_date + ", publisher_no=" + publisher_no + "]";
+	}
+	
+}

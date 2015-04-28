@@ -1,0 +1,9 @@
+package common.controller;
+
+import javax.servlet.http.HttpServlet;
+
+public class FrontController extends HttpServlet{
+	public void doGet(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException{
+		
+	}
+}

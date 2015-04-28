@@ -1,0 +1,54 @@
+package pub.test;
+
+import java.util.Date;
+import java.util.List;
+
+import pub.dao.BookDAO;
+import pub.vo.Book;
+
+public class TestBook {
+	public static void main(String[] args) {
+		BookDAO dao = BookDAO.getInstance();
+		int cnt = 0;
+		
+		System.out.println("---insert Book---");
+		cnt = dao.insertBook(new Book("9788996991342","미움받을용기", "기시미 이치로", 331,new Date(114,10,25),2));
+		
+		new Book("9791155780480","지지 않는 청춘", "이케다 다이사쿠", 180,new Date(115,02,16),2)
+		new Book("9791185502076","비밀의 정원", "조해너 배스포드 ", 96,new Date(114,08,20),3)
+		new Book("9788994120966","지적 대화를 위한 넓고 얕은 지식", "채사장", 376,new Date(114,05,24),4)
+		new Book("9788960867680","대화의 신", "래리 킹", 276,new Date(114,12,27),5)
+		System.out.println("insert 결과 : "+cnt);
+		
+//		System.out.println("---delete Publisher---");
+//		cnt = dao.deleteBookByIsbn("ISBN-123456");
+//		System.out.println("delete 결과 : "+cnt);
+//
+//		System.out.println("--update Publisher--");
+//		cnt = dao.updateBook(new Book("ISBN-123456","유지보수 힘들게 코딩하는 방법","개발자",230,16000,new Date(),10,new Publisher()));
+//		System.out.println("update 결과 : "+cnt);
+		
+//		System.out.println("--==select==--");
+//		System.out.println("--selectAll--");
+		List<Book> rList = dao.selectAllBook();
+//		for(Book b:rList){
+//			System.out.println(b);
+//		}
+		System.out.println("--selectBetweenDate");
+		rList = dao.selectBookBetweenDate("20150328","20150628");
+		for(Book b:rList){
+			System.out.println(b);
+		}			
+//		System.out.println("--selectByAuthor--");
+//		rList = dao.selectBookByAuthor("운영자");
+//		for(Book b:rList){
+//			System.out.println(b);
+//		}	
+//		System.out.println("--selectByISBN");
+//		rList = dao.selectBookByIsbn("ISBN-123456");
+//		for(Book b:rList){
+//			System.out.println(b);
+//		}	
+		
+	}
+}

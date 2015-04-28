@@ -1,0 +1,5 @@
+package mybatis.hr.test;
+
+public class TestEmployee {
+
+}

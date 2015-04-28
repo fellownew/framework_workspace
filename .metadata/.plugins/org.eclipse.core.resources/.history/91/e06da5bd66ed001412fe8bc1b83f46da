@@ -1,0 +1,13 @@
+package publisher.test;
+
+import publisher.dao.PublisherDAO;
+
+public class TestPublisher {
+	public static void main(String[] args) {
+		PublisherDAO dao = PublisherDAO.getInstance();
+		
+		System.out.println();
+		
+		
+	}
+}
