@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="bookstore.book">
+	<sql id="book-select">
+		select	isbn,
+					title,
+					author,
+					page,
+					price,
+					publish_date,
+					publisher_no
+		from 		book					
+	</sql>
+	
+	<!-- 기본 resultMap -->
+	<resultMap type="book" id="book-basic-resultmap">
+		<id column="isbn" property="isbn"/>
+		<result column="title" property="title"/>
+		<result column="author" property="author"/>
+		<result column="page" property="page"/>
+		<result column="price" property="price"/>
+		<result column="publish_date" property="publishDate"/>
+		<result column="publisher_no" property="publisherNo"/>
+	</resultMap>
+	<!-- 출판사 테이블과  join 처리를 할 resultMap -->
+	<resultMap type="book" id="book-publisher-resultmap" extends="book-basic-resultmap">
+		<association property="publisher" javaType="publisher" resultMap="bookstore.publisher.publisher-basic-resultmap"/>
+	</resultMap>
+	<!-- insert -->
+	<insert id="insertBook" parameterType="book">
+		insert into book values (#{isbn},#{title},#{author},#{page},#{price},#{publishDate},#{publisherNo})
+	</insert>
+	<!-- update -->
+	<update id="updateBook" parameterType="book">
+		update 	book
+			set	title=#{title},
+					author=#{author},
+					page=#{page},
+					price=#{price},
+					publish_date=#{publishDate},
+					publisher_no=#{publisherNo}
+		where	isbn=#{isbn}
+	</update>
+	<!-- delete -->
+	<delete id="deleteBookByISBN" parameterType="string">
+		delete from book where isbn = #{isbn}
+	</delete>
+	
+	<!-- select -->
+	<select id="selectAllBooks" resultMap="book-basic-resultmap">
+		<include refid="book-select"/>
+	</select>
+	<select id="selectBookByAuthor" resultMap="book-basic-resultmap" parameterType="string">
+		<include refid="book-select"/>
+		where author = #{author}
+	</select>
+	<select id="selectBookByPublishDateRange" resultMap="book-basic-resultmap" parameterType="map">
+		<include refid="book-select"/>
+		where publish_date between #{start} and #{end}
+	</select>
+	<select id="selectBookByISBN" resultMap="book-publisher-resultmap" parameterType="string">
+		<!-- publisher 테이블과 join select 기본 sql문은 publisherMapper의 sql문 사용 -->
+		<include refid="bookstore.publisher.publisher-book-join-select"/>
+		and b.isbn=#{isbn}
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

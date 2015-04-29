@@ -8,19 +8,19 @@
 <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactory"/>
 <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
 <fullyQualifiedTypeName name="mybatis.hr.dao.EmployeeDAO"/>
-<fullyQualifiedTypeName name="java.io.IOException"/>
-<fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactoryBuilder"/>
 <fullyQualifiedTypeName name="mybatis.hr.common.DatabaseManager"/>
 <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
 <fullyQualifiedTypeName name="publisher.vo.Book"/>
 <fullyQualifiedTypeName name="publisher.dao.PublisherDAO"/>
 <fullyQualifiedTypeName name="publisher.vo.Publisher"/>
-<fullyQualifiedTypeName name="java.io.InputStream"/>
-<fullyQualifiedTypeName name="org.apache.ibatis.io.Resources"/>
 <fullyQualifiedTypeName name="java.io.Serializable"/>
 <fullyQualifiedTypeName name="pub.vo.Book"/>
 <fullyQualifiedTypeName name="pub.vo.Publisher"/>
 <fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="org.apache.ibatis.io.Resources"/>
+<fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactoryBuilder"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>

@@ -11,7 +11,7 @@ org.eclipse.jdt.ui.formatterprofiles.version=12
 org.eclipse.jdt.ui.javadoclocations.migrated=true
 org.eclipse.jdt.ui.text.code_templates_migrated=true
 org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
-org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="true" context\="java-statements" deleted\="false" description\="SqlSession \uC0AC\uC6A9 \uD15C\uD50C\uB9BF" enabled\="true" name\="sqlsession">SqlSession session \= factory.openSession(true);&\#13;\r\ntry{&\#13;\r\n\t${cursor}&\#13;\r\n}finally{&\#13;\r\n\tsession.close();&\#13;\r\n}</template><template autoinsert\="true" context\="java" deleted\="false" description\="singleton pattern setting" enabled\="true" name\="singleton">private static ${enclosing_type} inst \= new ${enclosing_type};&\#13;\r\nprivate ${enclosing_type}(){}&\#13;\r\npublic static ${enclosing_type} getInstance(){&\#13;\r\n\treturn inst;&\#13;\r\n}&\#13;\r\n</template></templates>
 org.eclipse.jdt.ui.text.templates_migrated=true
 org.eclipse.jface.textfont=1|Consolas|10.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Consolas;
 proposalOrderMigrated=true

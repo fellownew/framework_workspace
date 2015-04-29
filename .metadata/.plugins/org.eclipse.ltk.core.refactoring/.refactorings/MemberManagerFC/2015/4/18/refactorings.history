@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;sessionFactory&apos; in &apos;member.model.dao.MemberDAO&apos; to &apos;factory&apos;&#x0D;&#x0A;- Original project: &apos;MemberManagerFC&apos;&#x0D;&#x0A;- Original element: &apos;member.model.dao.MemberDAO.sessionFactory&apos;&#x0D;&#x0A;- Renamed element: &apos;member.model.dao.MemberDAO.factory&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;sessionFactory&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;member.model.dao{MemberDAO.java[MemberDAO^sessionFactory" name="factory" references="true" setter="false" stamp="1430290647720" textual="false" version="1.0"/>
+</session>
