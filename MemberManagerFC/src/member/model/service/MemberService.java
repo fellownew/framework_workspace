@@ -1,11 +1,14 @@
 package member.model.service;
 
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import member.exception.DuplicatedIdException;
 import member.model.dao.MemberDAO;
 import member.vo.Member;
+import common.util.PagingBean;
 
 
 /**
@@ -109,21 +112,31 @@ public class MemberService {
 		System.out.println("del member :"+cnt);
 	}
 	
+	public Map<String,Object> getMemberListPaging(int pageNo) throws SQLException{
+		//전체 데이터 개수 리턴.
+		int memberCount = dao.selectTotalMemberCount();
+		//페이징을 위한 객체 생성.
+		PagingBean pb = new PagingBean(memberCount, pageNo);
+		//페이지에 표시될 데이터 수와 현재 페이지 지정.
+		Map<String,Integer> pageMap = new HashMap<>();
+		pageMap.put("perPage", pb.CONTENTS_PER_PAGE);
+		pageMap.put("page", pb.getCurrentPage());
+		//해당 페이지에 있는 데이터 가져오기.
+		List<Member> rList = dao.selectAllMemberPaging(pageMap);
+		
+		
+		
+		Map<String,Object> map = new HashMap<String,Object>();
+		map.put("memberList", rList);
+		map.put("startPage", pb.getStartPageOfPageGroup());
+		map.put("endPage", pb.getEndPageOfPageGroup());
+		map.put("page",pb.getCurrentPage());
+		map.put("preGroup", pb.isPreviousPageGroup());
+		map.put("nextGroup",pb.isNextPageGroup());
+		return map;
+	}
+	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

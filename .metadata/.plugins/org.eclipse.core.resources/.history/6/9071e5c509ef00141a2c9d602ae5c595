@@ -1,0 +1,39 @@
+package member.controller;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import member.model.service.MemberService;
+import common.controller.AttributeAndView;
+import common.controller.Controller;
+import common.util.PagingBean;
+
+public class MemberPagingListController implements Controller {
+
+	 
+	@Override
+	public AttributeAndView handle(HttpServletRequest request, HttpServletResponse response){
+		AttributeAndView av = null;
+		try {
+			MemberService ms = MemberService.getInstance();
+			int page = Integer.parseInt(request.getParameter("page"));
+			Map<Integer,Object> pagingMap = ms.getMemberListPaging(page);
+			Map<Object,Object> map = new HashMap<Object, Object>();
+			HashSet set = pagingMap.get(key)
+			
+			map.put(page, pagingMap.keySet().)
+			
+			
+			av = new AttributeAndView("/WEB-INF/view/member/member_list_paging.jsp", false, "map", map);
+		} catch (Exception e) {
+			e.printStackTrace();
+			av = new AttributeAndView("/WEB-INF/view/error.jsp", false, "error_message", e.getMessage());
+		}
+		return av;
+	}
+}

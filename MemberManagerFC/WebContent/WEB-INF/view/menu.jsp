@@ -15,5 +15,6 @@
 	</c:otherwise>
 </c:choose>
 <a href="/${initParam.rootPath }/controller?command=memberList">전체 회원정보 조회</a>&nbsp;&nbsp;
+<a href="/${initParam.rootPath }/controller?command=memberPagingList&page=1">전체 회원정보 조회-paging</a>&nbsp;&nbsp;
 
 <hr width="700" align="left" noshade="noshade">

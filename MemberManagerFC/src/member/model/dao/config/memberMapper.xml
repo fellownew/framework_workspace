@@ -34,4 +34,20 @@
 		<include refid="select-member"/>
 	</select>
 
+	<select id="selectTotalMemberCount" resultType="int">
+		select count(member_id) from member
+	</select>
+
+	<select id="selectAllMemberPaging" parameterType="map" resultMap="member-resultmap">
+		select page, member_id,member_pwd,member_name,member_email,member_date
+		from(
+			select ceil(rownum/#{perPage}) page, member_id,member_pwd,member_name,member_email,member_date 
+			from(
+				select member_id,member_pwd,member_name,member_email,member_date 
+				from member
+				order by member_date desc,member_id asc
+			)
+		)
+		where page=#{page}
+	</select>
 </mapper>

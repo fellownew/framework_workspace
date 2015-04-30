@@ -6,6 +6,7 @@ import member.controller.LoginController;
 import member.controller.LoginMemberInfoController;
 import member.controller.LogoutController;
 import member.controller.MemberListController;
+import member.controller.MemberPagingListController;
 import member.controller.ModifyFormController;
 import member.controller.ModifyMemberController;
 import member.controller.RemoveMemberController;
@@ -31,6 +32,8 @@ public class HandlerMapping {
 			ctr = new LogoutController();
 		}else if(command.equals("memberList")){
 			ctr = new MemberListController();
+		}else if(command.equals("memberPagingList")){
+			ctr = new MemberPagingListController();
 		}else if(command.equals("getMemberInfo")){
 			ctr = new LoginMemberInfoController();
 		}else if(command.equals("modifyForm")){

@@ -1,7 +1,9 @@
 package member.model.dao;
 
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import member.vo.Member;
 
@@ -91,6 +93,24 @@ public class MemberDAO {
 			int cnt = session.delete(ns+"deleteMemberById",id);
 			session.commit();
 			return cnt;
+		} finally {
+			session.close();
+		}
+	}
+	
+	public List<Member> selectAllMemberPaging(Map<String,Integer> map) throws SQLException{
+		SqlSession session = factory.openSession(true);
+		try {
+			return session.selectList(ns+"selectAllMemberPaging",map);
+		} finally {
+			session.close();
+		}
+	}
+	
+	public int selectTotalMemberCount() throws SQLException{
+		SqlSession session = factory.openSession(true);
+		try {
+			return session.selectOne(ns+"selectTotalMemberCount");
 		} finally {
 			session.close();
 		}
