@@ -1,0 +1,25 @@
+package spring.di.main;
+
+import spring.di.hello.EnHello;
+import spring.di.hello.Hello;
+import spring.di.hello.KorHello;
+
+public class TestHello {
+	Hello hello;
+	public TestHello(Hello hello){
+		this.hello = hello;
+	}
+	public void printGreeting(){
+		String name = "김철수";
+		String g = hello.sayHello(name);
+		System.out.println(g);
+	}
+	public static void main(String[] args) {
+		EnHello hello = new EnHello();
+		KorHello kHello = new KorHello();
+		TestHello th = new TestHello(hello);
+		TestHello kTh = new TestHello(kHello);
+		th.printGreeting();
+		
+	}
+}

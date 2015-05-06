@@ -14,17 +14,19 @@
 	</section>
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="kr.or.kosta"/>
 			<item value="MemberManagerFC"/>
 			<item value="mybatis_publisher"/>
 			<item value="teamproject_login"/>
 			<item value="test"/>
 			<item value="mybatis_customer"/>
-			<item value="kr.or.kosta"/>
 			<item value="test_mvn"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="spring_di_02"/>
+			<item value="spring_di_01"/>
 			<item value="MemberManagerFC"/>
 			<item value="mybatis_publisher"/>
 			<item value="teamproject_login"/>

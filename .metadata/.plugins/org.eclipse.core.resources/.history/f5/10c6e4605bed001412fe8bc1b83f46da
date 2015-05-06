@@ -1,8 +1,0 @@
-package publisher.vo;
-
-public class Publisher {
-	private int publisherNo;
-	private String publisherName;
-	private String publisherAddress;
-	private String publisher_tel;
-}

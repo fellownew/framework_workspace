@@ -1,0 +1,11 @@
+package spring.di.main;
+
+import spring.di.hello.Hello;
+
+public class TestHello {
+	Hello hello = new Hello();
+	public void printGreeting(){
+		String name = "김철수";
+		
+	}
+}

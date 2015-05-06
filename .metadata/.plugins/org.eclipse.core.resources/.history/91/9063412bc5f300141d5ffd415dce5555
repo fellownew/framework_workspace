@@ -1,0 +1,8 @@
+package spring.di.vo;
+
+public class Address {
+	private String zipcode;
+	private String address;
+	
+	
+}
