@@ -1,0 +1,5 @@
+package spring.di.service;
+
+public class CollectionDIService {
+
+}

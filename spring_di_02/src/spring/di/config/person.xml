@@ -22,6 +22,43 @@
 
 <bean id="address4" class="spring.di.vo.Address" c:zipcode="500-500" c:address="대전시 유성구"/>
 
+<!-- person 객체 설정 -->
 
-
+<bean id="person1" class="spring.di.vo.Person">
+	<constructor-arg>
+		<value type="int">32</value>
+	</constructor-arg>
+</bean>
+<bean id="person2" class="spring.di.vo.Person">
+	<constructor-arg type="int" value="23"/>
+</bean>
+<bean name="person3" class="spring.di.vo.Person">
+	<constructor-arg>
+		<ref bean="address4"/>
+	</constructor-arg>
+</bean>
+<bean name="person4" class="spring.di.vo.Person">
+	<constructor-arg>
+		<bean class="spring.di.vo.Address" c:zipcode="600-600" c:address="경기도 의정부시"/>
+	</constructor-arg>
+</bean>
+<bean name="person5" class="spring.di.vo.Person">
+	<constructor-arg ref="address3"/>
+</bean>
+<bean name="person6" class="spring.di.vo.Person" c:address-ref="address2"/>
+<bean name="person7" class="spring.di.vo.Person">
+	<constructor-arg>
+		<value>id-1</value>
+	</constructor-arg>
+	<constructor-arg>
+		<value>홍길동</value>
+	</constructor-arg>
+	<constructor-arg>
+		<value>23</value>
+	</constructor-arg>
+	<constructor-arg>
+		<bean class="spring.di.vo.Address" c:zipcode="100-100" c:address="서울시 강남구"/>
+	</constructor-arg>
+</bean>
+<bean name="person8" class="spring.di.vo.Person" c:id="id-2" c:name="임꺽정" c:age="24" c:address-ref="address4"/> 
 </beans>

@@ -1,0 +1,8 @@
+package spring.main;
+
+public class TestPerson {
+	public static void main(String[] args) {
+		Address address = null;
+		
+	}
+}
