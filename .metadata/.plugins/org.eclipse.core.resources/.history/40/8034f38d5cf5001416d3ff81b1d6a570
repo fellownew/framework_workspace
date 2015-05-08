@@ -1,0 +1,13 @@
+package com.mycom.main;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+
+public class TestMember {
+
+	public static void main(String[] args) {
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("com/mycom/common/config/spring-member.xml");
+		
+	}
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- BasicDataSource -> SqlSessionFactoryBean ->SqlSessionTemplate -> MemberDAOImpl -> -->
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" p:url="jdbc:oracle:thin:@127.0.0.1:1521:XE" p:username="scott" p:password="tiger"/>
+
+
+</beans>
