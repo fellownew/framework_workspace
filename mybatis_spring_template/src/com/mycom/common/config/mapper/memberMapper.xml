@@ -19,7 +19,7 @@
 	</resultMap>
 	
 	<insert id="insertMember" parameterType="member">
-		insert into member (id, password, name, email, join_date)
+		insert into member2 (id, password, name, email, join_date)
 		values (#{id}, #{password}, #{name}, #{email}, to_char(sysdate, 'yyyymmdd'))
 	</insert>
 	

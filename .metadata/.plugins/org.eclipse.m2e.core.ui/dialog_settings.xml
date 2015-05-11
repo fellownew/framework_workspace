@@ -25,6 +25,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="spring_mvc_01_basic"/>
 			<item value="mybatis_spring_template"/>
 			<item value="spring_di_05"/>
 			<item value="spring_di_04"/>

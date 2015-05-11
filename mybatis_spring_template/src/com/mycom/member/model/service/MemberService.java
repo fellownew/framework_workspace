@@ -50,5 +50,7 @@ public interface MemberService {
 	 * @param id 탈퇴할 회원 ID
 	 */
 	public abstract void removeMemberById(String id);
+	
+	public abstract void testTransaction(Member m1,Member m2) throws Exception;
 
 }

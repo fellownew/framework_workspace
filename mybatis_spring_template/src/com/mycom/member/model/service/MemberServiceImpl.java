@@ -1,5 +1,7 @@
 package com.mycom.member.model.service;
 
+import java.io.IOError;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -7,6 +9,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.mycom.common.util.PagingBean;
 import com.mycom.member.exception.DuplicatedIdException;
@@ -104,6 +107,17 @@ public class MemberServiceImpl implements MemberService {
 		
 		dao.deleteMemberById(id);
 		
+	}
+	//Spring Container에게 이 메소드는 Transaction Manager가 transaction 처리해야 하는 메소드임을 선언.
+	@Override
+	@Transactional(rollbackFor={IOException.class,ClassNotFoundException.class})
+	public void testTransaction(Member m1, Member m2) throws Exception{
+		dao.insertMember(m1);
+		if(true){
+			throw new IOException();
+			//Exception 기본적으로 checked계열은 rollback대상이 아님 rollbackFor에 추가해야만 대상이 될 수 있다.
+		}
+		dao.insertMember(m2);
 	}
 	
 	
