@@ -1,0 +1,5 @@
+package spring.calc.vo;
+
+public class Operand {
+
+}

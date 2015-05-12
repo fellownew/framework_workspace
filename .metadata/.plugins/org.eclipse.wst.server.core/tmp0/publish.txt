@@ -1,5 +1,6 @@
 #Tomcat publish data
-#Mon May 11 17:31:22 KST 2015
+#Tue May 12 17:32:12 KST 2015
 org.eclipse.jst.jee.server\:spring_mvc_01_basic=C\:\\JAVA\\apache-tomcat-7.0.59\\webapps\\spring_mvc_01_basic
-org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\KOSTA_03_011\\.m2\\repository\\org\\springframework\\spring-web\\4.1.6.RELEASE\\spring-web-4.1.6.RELEASE.jar=C\:\\JAVA\\apache-tomcat-7.0.59\\webapps\\spring_mvc_01_basic\\WEB-INF\\lib\\spring-web-4.1.6.RELEASE.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\KOSTA_03_011\\.m2\\repository\\org\\springframework\\spring-web\\4.1.6.RELEASE\\spring-web-4.1.6.RELEASE.jar=C\:\\JAVA\\apache-tomcat-7.0.59\\webapps\\spring_mvc_02_multiaction\\WEB-INF\\lib\\spring-web-4.1.6.RELEASE.jar
 org.eclipse.jst.jee.server\:MemberManagerFC=C\:\\JAVA\\apache-tomcat-7.0.59\\webapps\\MemberManagerFC
+org.eclipse.jst.jee.server\:spring_mvc_02_multiaction=C\:\\JAVA\\apache-tomcat-7.0.59\\webapps\\spring_mvc_02_multiaction

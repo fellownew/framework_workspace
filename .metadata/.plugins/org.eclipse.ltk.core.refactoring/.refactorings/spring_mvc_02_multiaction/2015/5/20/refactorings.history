@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;spring_mvc_02_multiaction/WebContent/WEB-INF/confiog&apos; to &apos;config&apos;" description="Rename resource &apos;confiog&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/WEB-INF/confiog" name="config" stamp="1431405000163" updateReferences="true"/>
+</session>

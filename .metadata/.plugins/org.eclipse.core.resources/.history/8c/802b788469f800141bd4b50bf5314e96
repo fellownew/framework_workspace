@@ -1,0 +1,5 @@
+package spring.calc.controller;
+
+public class CalculatorController {
+
+}
