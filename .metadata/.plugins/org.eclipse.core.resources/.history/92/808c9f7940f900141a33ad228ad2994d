@@ -1,0 +1,31 @@
+package spring.mvc.param;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+
+
+@Controller
+@RequestMapping("/param")
+//handler(Controller 로직처리) 메소드에 설정된 @RequestMapping 앞에 공통적으로 붙을 url 설정.
+public class RequestParameterHandleController {
+	/***********************
+	 * Handler Method들 (Controller 로직 처리 메소드들)
+	 ************************/
+	@RequestMapping("/requestForm.do")
+	public String requestForm(){
+		//request_form.jsp로 이동하는 controller 메소드
+		return "request_form.jsp";
+	}
+	
+	//요청 파라미터를 String 변수로 받기.
+	@RequestMapping("/login.do")
+	public String login(String id,String password){
+		
+		
+		return null;
+	}
+	
+	
+	
+}

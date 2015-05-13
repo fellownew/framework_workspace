@@ -14,6 +14,9 @@ public class CalculatorController extends MultiActionController{
 		return "calculator_form";
 	}
 	
+	public String index(HttpServletRequest request,HttpServletResponse response){
+		return "index";
+	}
 	//보여주어야 하는것 뿐만 아니라 값을 건네주어야 하기때문에 ModelAndView로 리턴함
 	public ModelAndView plus(HttpServletRequest request,HttpServletResponse response){
 		
@@ -34,4 +37,6 @@ public class CalculatorController extends MultiActionController{
 		
 		return new ModelAndView("result","result",result);
 	}
+	
+	
 }

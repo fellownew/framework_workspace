@@ -11,5 +11,8 @@
 	<bean name="methodNameResolver" class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver"
 		p:paramName="command"/>
 		
+
+	
 	<bean name="/calc.do" class="spring.calc.controller.CalculatorController" p:methodNameResolver-ref="methodNameResolver"/>
+	
 </beans>

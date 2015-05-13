@@ -1,8 +1,0 @@
-package spring.di.main;
-
-public class TestHello {
-	public void printGreeting(){
-		String name = "김철수";
-		
-	}
-}

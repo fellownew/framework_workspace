@@ -9,5 +9,6 @@
 <h2>계산 결과</h2>
 ${requestScope.result }<p/>
 <a href="calc.do?command=calcForm">form 가기</a>
+<a href="calc.do?command=index">Index 가기</a>
 </body>
 </html>
