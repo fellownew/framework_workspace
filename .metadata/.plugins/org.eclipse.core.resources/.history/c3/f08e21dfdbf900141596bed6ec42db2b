@@ -1,0 +1,17 @@
+package spring.mvc.param;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import spring.mvc.vo.Customer;
+
+@Controller
+@RequestMapping("/modelAttr")
+public class ModelAttributeHandleController {
+	public String register(Customer customer,HttpSession session){
+		System.out.println(customer);
+		session.setAttribute("info", customer);
+		return "register_result.jsp";
+	}
+		
+}

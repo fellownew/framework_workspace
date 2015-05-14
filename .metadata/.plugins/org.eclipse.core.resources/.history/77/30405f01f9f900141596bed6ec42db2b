@@ -1,0 +1,11 @@
+package spring.mvc.validation;
+
+
+/* valiodation 구현
+ * 1. validator를 implements 후 메소드 오버라이드.
+ * 
+ */
+
+public class CustomerValidator implements Validatortor{
+	
+}

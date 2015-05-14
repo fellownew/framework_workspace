@@ -1,0 +1,30 @@
+package spring.mvc.vo;
+
+import java.util.List;
+
+public class Customer {
+	private String id;
+	private String password;
+	private String name;
+	private String email;
+	private int salary;
+	private boolean marriage;
+	private String[] hobby;
+	private List interest;
+	public Customer(){}
+	public Customer(String id, String password, String name, String email,
+			int salary, boolean marriage, String[] hobby, List interest) {
+		super();
+		this.id = id;
+		this.password = password;
+		this.name = name;
+		this.email = email;
+		this.salary = salary;
+		this.marriage = marriage;
+		this.hobby = hobby;
+		this.interest = interest;
+	}
+	
+	
+	
+}

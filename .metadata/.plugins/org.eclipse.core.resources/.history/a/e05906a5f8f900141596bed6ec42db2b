@@ -1,0 +1,5 @@
+package spring.mvc.vaildation;
+
+public class CustomerVaildator {
+
+}

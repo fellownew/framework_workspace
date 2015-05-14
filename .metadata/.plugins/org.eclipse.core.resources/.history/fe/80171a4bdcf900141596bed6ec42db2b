@@ -1,0 +1,12 @@
+<%@ page contentType="text/html; charset=UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+${requestScope.customer }<p>
+<a href="${initParam.rootPath }/modelAttr/register_form.do">등록폼</a>
+</body>
+</html>

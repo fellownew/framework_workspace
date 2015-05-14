@@ -1,0 +1,11 @@
+package spring.mvc.param;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/modelAttr")
+public class ModelAttributeHandleController {
+	
+		
+}

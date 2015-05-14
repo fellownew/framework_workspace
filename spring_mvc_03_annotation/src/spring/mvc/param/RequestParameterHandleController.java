@@ -15,11 +15,11 @@ public class RequestParameterHandleController {
 	/***********************
 	 * Handler Method들 (Controller 로직 처리 메소드들)
 	 ************************/
-	@RequestMapping("/requestForm.do")
-	public String requestForm(){
-		//request_form.jsp로 이동하는 controller 메소드
-		return "request_form.jsp";
-	}
+//	@RequestMapping("/requestForm.do")
+//	public String requestForm(){
+//		//request_form.jsp로 이동하는 controller 메소드
+//		return "request_form.jsp";
+//	}
 	
 	//요청 파라미터를 String 변수로 받기. 넘어온 파라미터 name과 매개변수를 매칭시켜 받아옴.
 	@RequestMapping("/login.do")
