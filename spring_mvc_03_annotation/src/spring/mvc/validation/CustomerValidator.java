@@ -1,6 +1,7 @@
 package spring.mvc.validation;
 
 import org.springframework.validation.Errors;
+import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
 import spring.mvc.vo.Customer;
@@ -40,6 +41,9 @@ public class CustomerValidator implements Validator{
 		if(id!=null && id.length()<6){
 			errors.rejectValue("id", "minlength", new Object[]{6}, "ID는 6글자 이상 넣으세요");
 		}
+		//validationUtils - 특정 필드(요청 파라미터)의 값이 있는지 없는지 체크하는 메소드 제공.
+		ValidationUtils.rejectIfEmpty(errors, "password", "required"); // null,""(length==0) 실패,
+		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "required");//null,""(lignth==0) 실패, 공백- (trim까지 적용)
 	}
 	
 }

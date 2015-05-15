@@ -13,4 +13,5 @@
 //com.springsource.config.ui.prefs.activePageIndex\:/spring_mvc_02_multiaction/WebContent/WEB-INF/config/calculator-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
 //com.springsource.config.ui.prefs.activePageIndex\:/spring_mvc_02_multiaction/WebContent/WEB-INF/config/root-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
 //com.springsource.config.ui.prefs.activePageIndex\:/spring_mvc_03_annotation/WebContent/WEB-INF/config/spring-context.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/spring_mvc_04_ajax/WebContent/WEB-INF/config/spring-ajax.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
 eclipse.preferences.version=1

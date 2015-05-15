@@ -7,5 +7,7 @@
 </head>
 <body>
 	${sessionScope.loginInfo }<br>
+	${requestScope.key }<br>
+	${requestScope.key2 }<br>
 </body>
 </html>

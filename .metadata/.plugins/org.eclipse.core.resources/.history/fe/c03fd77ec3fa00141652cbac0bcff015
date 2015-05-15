@@ -1,0 +1,16 @@
+package com.mycom.controller;
+
+import org.springframework.stereotype.Controller;
+
+import com.mycom.model.service.MemberService;
+
+
+@Controller
+public class AjaxController {
+	
+	@AutoWired
+	private MemberService service;
+	
+	public String findMemberById()
+	
+}

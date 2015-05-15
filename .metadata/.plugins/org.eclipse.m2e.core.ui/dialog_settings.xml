@@ -25,6 +25,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="spring_mvc_04_ajax"/>
 			<item value="spring_mvc_03_annotation"/>
 			<item value="spring_mvc_02_multiaction"/>
 			<item value="spring_mvc_01_basic"/>
@@ -39,7 +40,6 @@
 			<item value="teamproject_login"/>
 			<item value="test"/>
 			<item value="mybatis_customer"/>
-			<item value="mybatis_01_basic"/>
 		</list>
 		<list key="version">
 			<item value="0.0.1-SNAPSHOT"/>

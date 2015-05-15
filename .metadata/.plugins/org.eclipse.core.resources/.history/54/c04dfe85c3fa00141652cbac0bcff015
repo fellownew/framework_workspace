@@ -1,0 +1,18 @@
+package com.mycom.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.mycom.model.service.MemberService;
+
+
+@Controller
+public class AjaxController {
+	
+	@AutoWired
+	private MemberService service;
+	
+	@RequestMapping("/ajax/findById")
+	public String findMemberById(){};
+	
+}

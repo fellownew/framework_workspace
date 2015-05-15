@@ -18,11 +18,11 @@
 		</tr>
 		<tr>
 			<td>패스워드</td>
-			<td><input type="password" name="password" value="1111"></td>
+			<td><input type="password" name="password" value="1111"><span class="error"><form:errors path="customer.password" delimiter=" - "/></span></td>
 		</tr>
 		<tr>
 			<td>이름</td>
-			<td><input type="text" name="name" value="김영수"></td>
+			<td><input type="text" name="name" value="김영수"><span class="error"><form:errors path="customer.name" delimiter=" - "/></span></td>
 		</tr>
 		<tr>
 			<td>email주소</td>

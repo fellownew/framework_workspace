@@ -3,14 +3,15 @@
 	<section name="ExternalProjectImportWizard">
 		<item value="true" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
 		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
-		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value=""/>
 			<item value="C:\Users\KOSTA_03_011\Desktop\mybatis_spring_template"/>
 			<item value="C:\Users\KOSTA_03_011\Desktop\AnnotationDI_Template"/>
-			<item value=""/>
 			<item value="C:\JAVA\eclipse\web_workspace\MemberManagerFC"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="C:\Users\KOSTA_03_011\Desktop\spring_mvc_04_ajax.zip"/>
 			<item value=""/>
 			<item value="C:\Users\KOSTA_03_011\Desktop\spring_di_member_manager.zip"/>
 			<item value="C:\Users\KOSTA_03_011\Documents\카카오톡 받은 파일\mybatis_book_inst.zip"/>

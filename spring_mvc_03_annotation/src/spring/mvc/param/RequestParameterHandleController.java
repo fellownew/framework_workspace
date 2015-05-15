@@ -3,6 +3,7 @@ package spring.mvc.param;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -37,10 +38,13 @@ public class RequestParameterHandleController {
 	
 	//같은 일므으로 여러개 요청 파라미터들이 넘어온 경우 처리.
 	@RequestMapping("/manyParams.do")
-	public String manyParams(String []txt){
+	//Model||ModelMap||Map - view에게 전달할 값을 설정하는 객체를 받을 변수
+	public String manyParams(String []txt, Model model){
 		for(String s : txt){
 			System.out.println(s);
 		}
+		model.addAttribute("key","value");
+		model.addAttribute("key2","value2");
 		return "request_result.jsp";
 	}
 }
