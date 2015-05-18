@@ -1,0 +1,10 @@
+package spring.mvc.view;
+
+import org.springframework.web.servlet.view.AbstractView;
+
+public class DownloadView extends AbstractView{
+	public String getContextType(){
+		
+		
+	}
+}

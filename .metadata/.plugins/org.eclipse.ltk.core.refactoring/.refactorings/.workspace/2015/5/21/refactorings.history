@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;spring_mvc_05_fileUpload&apos;" deleteContents="true" description="Delete resource &apos;spring_mvc_05_fileUpload&apos;" element1="/spring_mvc_05_fileUpload" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1431912199882"/>
+</session>
