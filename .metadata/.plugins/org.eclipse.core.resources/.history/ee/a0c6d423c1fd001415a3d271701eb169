@@ -1,0 +1,10 @@
+package spring.mvc.controller;
+
+@Controller
+public class TestController {
+	@RequestMapping("/test1")
+	public String test1(){
+		System.out.println("TestController.test1() 실행");
+		return "response.jsp";
+	}
+}

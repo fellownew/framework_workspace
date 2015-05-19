@@ -1,0 +1,31 @@
+package spring.mvc.tiles.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+
+public class TilesController {
+	
+	/*
+	 * <a href="mainpage.do">메인페이지</a><br>
+<a href="join_form.do">회원가입</a><br>
+<a href="register_form.do">상품등록</a><br>
+<a href="no_tiles.do">타일즈 안타는 페이지 호출</a><br>
+	 */
+	
+	@RequestMapping("/mainpage.do")
+	public String mainPage(){
+		return "main";
+	}
+	@RequestMapping("/join_form.do")	
+	public String join_form(){
+		return "member/join_form.jsp";
+	}
+	@RequestMapping("/register_form.do")	
+	public String register_form(){
+		return "product/register_form.jsp";
+	}
+	@RequestMapping("/no_tiles.do")	
+	public String no_tiles(){
+		return "../no_tiles.jsp";
+	}
+	
+}

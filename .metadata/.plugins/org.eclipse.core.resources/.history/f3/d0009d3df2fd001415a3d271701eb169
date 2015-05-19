@@ -1,0 +1,11 @@
+package spring.mvc.tiles.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+
+public class TilesController {
+	
+	@RequestMapping("/mainpage.do")
+	public String mainPage(){
+		
+	}
+}
