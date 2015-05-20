@@ -1,0 +1,5 @@
+package log.exam;
+
+public class Log4JTest {
+
+}

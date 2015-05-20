@@ -1,0 +1,12 @@
+package log.exam;
+
+public class Log4JTest {
+	public static void main(String[] args) {
+		
+	}
+	
+	public void writeLogger(){
+		
+	}
+	
+}

@@ -1,0 +1,20 @@
+package log.exam;
+
+import org.apache.log4j.Logger;
+
+public class Log4JTest {
+	//Logger 객체 조회 = getLogger(Logger 식별값) : log4j 설정 파일을 읽어 그 설정에 맞게 일하는 Logger객체 리턴.
+	private static Logger logger = Logger.getLogger(Log4JTest.class);
+	
+	public static void main(String[] args) {
+		logger.info("main mthod start");
+		Log4JTest test = new Log4JTest();
+		test.writeLogger();
+		
+	}
+	
+	public void writeLogger(){
+		
+	}
+	
+}
