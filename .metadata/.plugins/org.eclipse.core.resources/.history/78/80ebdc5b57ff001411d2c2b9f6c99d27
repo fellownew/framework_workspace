@@ -1,0 +1,11 @@
+package sop.core;
+
+public class CoreServiceImpl {
+	public void coreMethod1(){
+		
+		}
+	public void coreMethod2(){
+		
+	}
+	
+}

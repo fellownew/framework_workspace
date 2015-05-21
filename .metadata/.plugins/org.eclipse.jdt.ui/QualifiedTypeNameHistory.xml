@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="publisher.dao.PublisherDAO"/>
-<fullyQualifiedTypeName name="publisher.vo.Publisher"/>
-<fullyQualifiedTypeName name="java.io.Serializable"/>
 <fullyQualifiedTypeName name="pub.vo.Book"/>
 <fullyQualifiedTypeName name="pub.vo.Publisher"/>
 <fullyQualifiedTypeName name="java.sql.Date"/>
@@ -60,4 +57,7 @@
 <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
 <fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
 <fullyQualifiedTypeName name="log.exam.Log4JTest"/>
+<fullyQualifiedTypeName name="sop.core.CoreServiceImpl"/>
+<fullyQualifiedTypeName name="sop.cross.CrossCustionAspect"/>
+<fullyQualifiedTypeName name="sop.core.CoreServiceProxy"/>
 </qualifiedTypeNameHistroy>

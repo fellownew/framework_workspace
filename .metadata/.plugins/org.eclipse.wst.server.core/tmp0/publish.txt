@@ -1,8 +1,10 @@
 #Tomcat publish data
-#Tue May 19 16:53:55 KST 2015
+#Thu May 21 15:18:48 KST 2015
+org.eclipse.jst.jee.server\:team_project=C\:\\JAVA\\apache-tomcat-7.0.59\\webapps\\team_project
 org.eclipse.jst.jee.server\:spring_mvc_tiles_template=C\:\\JAVA\\apache-tomcat-7.0.59\\webapps\\spring_mvc_tiles_template
 org.eclipse.jst.jee.server\:spring_mvc_06_interceptor=C\:\\JAVA\\apache-tomcat-7.0.59\\webapps\\spring_mvc_06_interceptor
 org.eclipse.jst.jee.server\:spring_mvc_03_annotation=C\:\\JAVA\\apache-tomcat-7.0.59\\webapps\\spring_mvc_03_annotation
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\KOSTA_03_011\\.m2\\repository\\org\\springframework\\spring-web\\4.1.4.RELEASE\\spring-web-4.1.4.RELEASE.jar=C\:\\JAVA\\apache-tomcat-7.0.59\\webapps\\team_project\\WEB-INF\\lib\\spring-web-4.1.4.RELEASE.jar
 org.eclipse.jst.jee.server\:spring_mvc_05_fileUpload=C\:\\JAVA\\apache-tomcat-7.0.59\\webapps\\spring_mvc_05_fileUpload
 org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\KOSTA_03_011\\.m2\\repository\\org\\springframework\\spring-web\\4.1.6.RELEASE\\spring-web-4.1.6.RELEASE.jar=C\:\\JAVA\\apache-tomcat-7.0.59\\webapps\\spring_mvc_tiles_template\\WEB-INF\\lib\\spring-web-4.1.6.RELEASE.jar
 org.eclipse.jst.jee.server\:spring_mvc_04_ajax=C\:\\JAVA\\apache-tomcat-7.0.59\\webapps\\spring_mvc_04_ajax

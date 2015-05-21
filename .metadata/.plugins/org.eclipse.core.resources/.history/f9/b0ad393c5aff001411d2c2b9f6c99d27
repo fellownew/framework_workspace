@@ -1,0 +1,7 @@
+package sop;
+
+public class TestAop {
+	public static void main(String[] args) {
+		
+	}
+}

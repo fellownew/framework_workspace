@@ -1,0 +1,10 @@
+package sop.core;
+
+public class CoreServiceProxy {
+	public void coreMethod1(){
+		
+	}
+	public void coreMethod2(){
+		
+	}
+}

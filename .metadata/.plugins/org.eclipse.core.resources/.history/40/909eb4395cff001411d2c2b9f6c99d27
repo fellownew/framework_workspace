@@ -1,0 +1,9 @@
+package sop;
+
+import sop.core.CoreService;
+
+public class TestAop {
+	public static void main(String[] args) {
+		CoreService c;
+	}
+}

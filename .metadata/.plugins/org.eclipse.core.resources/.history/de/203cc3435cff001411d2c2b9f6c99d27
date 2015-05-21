@@ -1,0 +1,16 @@
+package sop;
+
+import sop.core.CoreService;
+import sop.core.CoreServiceProxy;
+
+public class TestAop {
+	public static void main(String[] args) {
+		CoreService c;
+	}
+	
+	public static CoreService getBean(){
+		CoreServiceProxy proxy = new CoreServiceProxy();
+		return proxy;
+	}
+	
+}

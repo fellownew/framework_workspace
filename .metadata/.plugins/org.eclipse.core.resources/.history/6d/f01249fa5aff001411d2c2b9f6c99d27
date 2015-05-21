@@ -1,0 +1,10 @@
+package sop;
+
+import sop.core.CoreServiceProxy;
+
+public class TestAop {
+	public static void main(String[] args) {
+		CoreService c = new CoreService();
+		c.coreMethod1();
+	}
+}

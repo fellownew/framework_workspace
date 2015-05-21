@@ -1,0 +1,5 @@
+package sop.core;
+
+public interface CoreService {
+
+}
