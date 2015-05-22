@@ -1,0 +1,7 @@
+package spring.aop.common;
+
+import org.apache.log4j.Logger;
+
+public class LoggerAspect {
+	private Logger logger = new LoggerAspect();
+}

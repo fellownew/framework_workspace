@@ -14,8 +14,8 @@
 	</section>
 	<section name="wizardPage">
 		<list key="groupId">
-			<item value="log4jExam"/>
 			<item value="kr.or.kosta"/>
+			<item value="log4jExam"/>
 			<item value="MemberManagerFC"/>
 			<item value="mybatis_publisher"/>
 			<item value="teamproject_login"/>
@@ -26,6 +26,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="spring_aop_01"/>
 			<item value="log4jExam"/>
 			<item value="spring_mvc_tiles_template"/>
 			<item value="spring_mvc_06_interceptor"/>
@@ -40,7 +41,6 @@
 			<item value="spring_di_03"/>
 			<item value="spring_di_02"/>
 			<item value="spring_di_01"/>
-			<item value="MemberManagerFC"/>
 		</list>
 		<list key="version">
 			<item value="0.0.1-SNAPSHOT"/>
