@@ -21,6 +21,9 @@
 			<!-- pointcut : 공통사항을 적용할 핵심로직(메소드)를 지정 -->
 			<aop:pointcut expression="execution(public * spring.aop..*Service.*Before*(..))" id="before-pc"/>
 			<aop:before method="beforeLogger" pointcut-ref="before-pc"/>
+			<aop:after-returning method="afterReturn" pointcut="execution(public * spring.aop..*Service.*Return(..))" returning="returnValue"/>
+			<aop:after-throwing method="afterThrow" pointcut="within(spring.aop..*)" throwing="ex"/>
+			<aop:around method="timeCheckAround" pointcut="within(spring..*)"/>
 		</aop:aspect>
 	</aop:config>
 </beans>

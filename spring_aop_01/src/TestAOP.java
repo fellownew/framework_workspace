@@ -11,5 +11,15 @@ public class TestAOP {
 		service.businessMethodBefore1();
 		System.out.println("-----------------------");
 		service.businessMethodBefore2("홍길동");
+		System.out.println("***********************");
+		String ret = service.businessMethodReturn();
+		System.out.println("정상 호출 결과 : "+ret);
+		System.out.println("=======================");
+		try{
+			service.businessMethodThrow();
+		}catch(Throwable e){
+			System.out.println("메인메소드 - catch");
+		}
+		
 	}
 }

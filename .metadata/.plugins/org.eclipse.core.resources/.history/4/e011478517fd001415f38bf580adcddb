@@ -1,7 +1,0 @@
-package spring.mvc.vo;
-
-public class SingleUpload {
-	private String title;
-	private MultiPartFile upfile;
-	private String info;
-}

@@ -1,6 +1,0 @@
-package spring.mvc.vo;
-
-public class MultiUpload {
-	private String title;
-	private List upfile;
-}
